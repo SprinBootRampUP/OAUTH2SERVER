@@ -13,6 +13,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
      @Query("SELECT u FROM User u WHERE u.userName = :userName")
      User findUserByUserName(@Param("userName") String userName);
 
+
 }
 
 

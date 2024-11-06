@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomAuthenticationProvider  implements AuthenticationProvider {
 
-
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
 
@@ -28,7 +27,7 @@ public class CustomAuthenticationProvider  implements AuthenticationProvider {
         UserDetails user = customUserDetailsService.loadUserByUsername(userName);
 
         System.out.printf("s" + userName + password + user);
-        if( true ){
+        if( passwordEncoder.matches(password, user.getPassword()) ){
             return new UsernamePasswordAuthenticationToken(
                     user.getUsername(),
                     user.getPassword(),

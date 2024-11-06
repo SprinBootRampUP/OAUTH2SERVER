@@ -42,13 +42,17 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="fc6dec28-afc5-43cd-b6c4-968f328ceeff" object-ref="schemas/oauth_server_db/tables/user" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="fc6dec28-afc5-43cd-b6c4-968f328ceeff" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="fc6dec28-afc5-43cd-b6c4-968f328ceeff" dataset="oauth_server_db.role" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="fc6dec28-afc5-43cd-b6c4-968f328ceeff" dataset="oauth_server_db.user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="fc6dec28-afc5-43cd-b6c4-968f328ceeff" dataset="oauth_server_db.user_roles" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -77,7 +81,7 @@
           <deprecated-pwd value="cm9vdA==" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />

@@ -6,6 +6,7 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 import org.ietf.jgss.Oid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -29,6 +30,8 @@ import org.springframework.security.oauth2.server.authorization.config.annotatio
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
+import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
+import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
@@ -46,13 +49,13 @@ import java.util.UUID;
 @Configuration
 public class OAuthServerConfig {
 
-
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Bean
-    @Order(Ordered.HIGHEST_PRECEDENCE)
+    @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain
-            (HttpSecurity httpSecurity) throws Exception {
-
+            (HttpSecurity httpSecurity ,RegisteredClientRepository registeredClientRepository ) throws Exception {
 
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(httpSecurity);
 
@@ -75,7 +78,7 @@ public class OAuthServerConfig {
 
         RegisteredClient registeredClient = RegisteredClient.withId("test_id")
                 .clientId("resource_server")
-                .clientSecret("secret")
+                .clientSecret(passwordEncoder.encode("secret"))
             //    .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
               //  .clientAuthenticationMethod(ClientAuthenticationMethod.NONE) //
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_POST)//
@@ -86,6 +89,9 @@ public class OAuthServerConfig {
 
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
+                .scope( OidcScopes.ADDRESS)
+                .scope(OidcScopes.EMAIL)
+                .scope(OidcScopes.PHONE)
                 //.scope("read")
                 .clientSettings( ClientSettings.builder().requireAuthorizationConsent(true).build())
                 .build();
@@ -95,23 +101,18 @@ public class OAuthServerConfig {
 
 
 
-@Bean
+    @Bean
     public AuthorizationServerSettings authorizationServerSettings(){
         return AuthorizationServerSettings.builder().build();
     }
 
-//    @Bean
-//    public JWKSource<SecurityContext> jwkSource() {
-//        RSAKey rsaKey = generateRsa();
-//        JWKSet jwkSet = new JWKSet(rsaKey);
-//        return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
-//    }
+
+
+
+
 
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
-
-
-
 
         RSAKey rsaKey = generateRsa();
         JWKSet jwkSet = new JWKSet(rsaKey);
@@ -148,6 +149,11 @@ public class OAuthServerConfig {
     }
 
 
+    @Bean
+    public OAuth2TokenCustomizer<JwtEncodingContext> jwtTokenCustomizer() {
+        return new CustomJwtTokenCustomizer();
+    }
+
 //    @Bean
 //    UserDetailsService inMemoryUserDetailsManager(){
 //
@@ -162,9 +168,9 @@ public class OAuthServerConfig {
 
 
     //
-        @Bean
-    public PasswordEncoder passwordEncoder(){
-        return NoOpPasswordEncoder.getInstance();
-    }
+//        @Bean
+//    public PasswordEncoder passwordEncoder(){
+//        return NoOpPasswordEncoder.getInstance();
+//    }
 
 }

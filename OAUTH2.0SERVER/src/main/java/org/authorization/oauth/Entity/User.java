@@ -1,10 +1,9 @@
 package org.authorization.oauth.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -16,8 +15,30 @@ public class User {
 
     private String userName ;
     private String password;
-    private String email;
 
-    private String role;
+    private String email;
+    private String phoneNumber;
+    private String address;
+
+    @ManyToMany( fetch = FetchType.EAGER)
+    @JoinTable(
+            name="user_roles",
+            joinColumns = {
+                    @JoinColumn(name = "user_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "role_id")
+            }
+    )
+    private List<Role> roles;
+
+    @Transient
+    private List<String> roleNames;
+
+    @Override
+    public String toString() {
+
+        return "" ;
+    }
 
 }

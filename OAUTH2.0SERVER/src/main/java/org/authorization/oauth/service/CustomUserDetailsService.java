@@ -1,5 +1,8 @@
 package org.authorization.oauth.service;
 
+import jakarta.transaction.Transactional;
+import org.authorization.oauth.Entity.Role;
+import org.authorization.oauth.Entity.RoleEnum;
 import org.authorization.oauth.Entity.User;
 import org.authorization.oauth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -31,17 +35,24 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findUserByUserName(username);
-        System.out.printf("user" + user);
+//        System.out.printf("user" + user);
         return new  org.springframework.security.core.userdetails.User(
                 user.getUserName(),
                 user.getPassword(),
-                getAuthorities(user.getRole())
+                getAuthorities(user.getRoles())
         );
     }
 
-    private Collection<GrantedAuthority> getAuthorities(String role) {
-       return  Collections.singleton( new SimpleGrantedAuthority(role));
+    private Collection<GrantedAuthority> getAuthorities(List<Role> roles) {
+
+         List<GrantedAuthority> authorities = roles.stream()
+                .map( role ->
+                    new SimpleGrantedAuthority( "ROLE_" +role.getName().toString())
+                ) .collect(Collectors.toList());
+
+       return  authorities;
     }
 }
