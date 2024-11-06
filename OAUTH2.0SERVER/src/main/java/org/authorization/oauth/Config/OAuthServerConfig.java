@@ -15,22 +15,32 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.OidcScopes;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
+import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.UUID;
 
 @Configuration
@@ -46,28 +56,53 @@ public class OAuthServerConfig {
 
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(httpSecurity);
 
-        return  httpSecurity.formLogin(Customizer.withDefaults()).build();
+
+
+        httpSecurity.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
+                .oidc(Customizer.withDefaults());
+
+        return httpSecurity.formLogin(Customizer.withDefaults()).build();
+
+
+      //  return  httpSecurity.build();
 
 
     }
 
 
+
+
+@Bean
     public RegisteredClientRepository registeredClientRepository(){
 
         RegisteredClient registeredClient = RegisteredClient.withId("test_id")
                 .clientId("resource_server")
                 .clientSecret("secret")
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+            //    .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+              //  .clientAuthenticationMethod(ClientAuthenticationMethod.NONE) //
+                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_POST)//
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-                .redirectUri("http:localhost:3001/login/oauth/oauthserver")
+                .redirectUri("http://localhost:3001/login/oauth/oauthserver")
+               // .redirectUri("abc")
+
                 .scope(OidcScopes.OPENID)
+                .scope(OidcScopes.PROFILE)
                 //.scope("read")
                 .clientSettings( ClientSettings.builder().requireAuthorizationConsent(true).build())
                 .build();
 
         return  new InMemoryRegisteredClientRepository(registeredClient);
     }
+
+
+
+@Bean
+    public AuthorizationServerSettings authorizationServerSettings(){
+        return AuthorizationServerSettings.builder().build();
+    }
+
+
 
 
     @Bean
@@ -100,9 +135,14 @@ public class OAuthServerConfig {
     }
 
 
+    @Bean
+    public JwtDecoder jwtDecoder( JWKSource<SecurityContext> jwkSource){
+        return  OAuth2AuthorizationServerConfiguration.jwtDecoder(jwkSource);
+    }
+
 
     @Bean
-    InMemoryUserDetailsManager inMemoryUserDetailsManager(){
+    UserDetailsService inMemoryUserDetailsManager(){
 
         User.UserBuilder userBuilder = User.builder();
         UserDetails user=userBuilder.username("user").password("user").roles("USER").build();
@@ -112,4 +152,12 @@ public class OAuthServerConfig {
          return new InMemoryUserDetailsManager(user,author,admin);
 
     }
+
+
+    //
+        @Bean
+    public PasswordEncoder passwordEncoder(){
+        return NoOpPasswordEncoder.getInstance();
+    }
+
 }
