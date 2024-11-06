@@ -51,12 +51,10 @@ public class OAuthServerConfig {
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain authorizationServerSecurityFilterChain
-            (HttpSecurity httpSecurity, RegisteredClientRepository registeredClientRepository) throws Exception {
+            (HttpSecurity httpSecurity) throws Exception {
 
 
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(httpSecurity);
-
-
 
         httpSecurity.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
                 .oidc(Customizer.withDefaults());
@@ -102,15 +100,24 @@ public class OAuthServerConfig {
         return AuthorizationServerSettings.builder().build();
     }
 
-
-
+//    @Bean
+//    public JWKSource<SecurityContext> jwkSource() {
+//        RSAKey rsaKey = generateRsa();
+//        JWKSet jwkSet = new JWKSet(rsaKey);
+//        return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
+//    }
 
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
+
+
+
+
         RSAKey rsaKey = generateRsa();
         JWKSet jwkSet = new JWKSet(rsaKey);
         return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
     }
+
 
     private static RSAKey generateRsa() {
         KeyPair keyPair = generateRsaKey();
@@ -141,17 +148,17 @@ public class OAuthServerConfig {
     }
 
 
-    @Bean
-    UserDetailsService inMemoryUserDetailsManager(){
-
-        User.UserBuilder userBuilder = User.builder();
-        UserDetails user=userBuilder.username("user").password("user").roles("USER").build();
-         UserDetails author=userBuilder.username("author").password("author").roles("AUTHOR" ,"USER").build();
-        UserDetails admin=userBuilder.username("admin").password("admin").roles("ADMIN").build();
-
-         return new InMemoryUserDetailsManager(user,author,admin);
-
-    }
+//    @Bean
+//    UserDetailsService inMemoryUserDetailsManager(){
+//
+//        User.UserBuilder userBuilder = User.builder();
+//        UserDetails user=userBuilder.username("user").password("user").roles("USER").build();
+//         UserDetails author=userBuilder.username("author").password("author").roles("AUTHOR" ,"USER").build();
+//        UserDetails admin=userBuilder.username("admin").password("admin").roles("ADMIN").build();
+//
+//         return new InMemoryUserDetailsManager(user,author,admin);
+//
+//    }
 
 
     //
