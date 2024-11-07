@@ -27,14 +27,12 @@ public class AppSecurityConfig {
     private JWKSource<SecurityContext> jwkSource;
 
     @Bean
-  // @Order(2)
     public SecurityFilterChain appSecurityFilterChain(HttpSecurity httpSecurity)throws  Exception{
 
         httpSecurity
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/oauth/register"))
 
                 .authorizeHttpRequests( request -> request
-                        .requestMatchers("/userinfo").hasAuthority("SCOPE_openid")
                         .requestMatchers("/oauth/register" ).permitAll()
 
                         .anyRequest().authenticated()

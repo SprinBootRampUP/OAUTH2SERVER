@@ -167,10 +167,5 @@ public class OAuthServerConfig {
 //    }
 
 
-    //
-//        @Bean
-//    public PasswordEncoder passwordEncoder(){
-//        return NoOpPasswordEncoder.getInstance();
-//    }
 
 }
