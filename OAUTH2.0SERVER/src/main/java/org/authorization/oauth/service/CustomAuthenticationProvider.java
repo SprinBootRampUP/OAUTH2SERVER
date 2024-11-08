@@ -28,17 +28,10 @@ public class CustomAuthenticationProvider  implements AuthenticationProvider {
 
         System.out.printf("s" + userName + password + user);
         if( passwordEncoder.matches(password, user.getPassword()) ){
-//            return new UsernamePasswordAuthenticationToken(
-//                    user.getUsername(),
-//                    user.getPassword(),
-//                    user.getAuthorities()
-//            );
-
-            return new S(
+            return new UsernamePasswordAuthenticationToken(
                     user.getUsername(),
                     user.getPassword(),
-                    user.getAuthorities(),
-                    user.getUserid()
+                    user.getAuthorities()
             );
 
         }

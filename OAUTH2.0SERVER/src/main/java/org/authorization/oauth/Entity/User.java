@@ -13,11 +13,14 @@ public class User {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
+@Column(unique = true)
     private String userName ;
+
+
     private String password;
 
     private String email;
-    private String phoneNumber;
+    private Long phoneNumber;
     private String address;
 
     @ManyToMany( fetch = FetchType.EAGER)

@@ -44,5 +44,17 @@ public class CustomUserDetails implements UserDetails {
         return user.getUserName();
     }
 
+    public Long getPhoneNumber() {
+        return user.getPhoneNumber();
+    }
+
+    public String getEmail() {
+        return user.getEmail();
+    }
+
+    public String getAddress() {
+        return user.getAddress();
+    }
+
 
 }

@@ -23,6 +23,9 @@ import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.OidcScopes;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.JwtEncoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
@@ -30,6 +33,7 @@ import org.springframework.security.oauth2.server.authorization.config.annotatio
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
+import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
@@ -42,6 +46,7 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.UUID;
@@ -65,9 +70,6 @@ public class OAuthServerConfig {
         return httpSecurity.formLogin(Customizer.withDefaults()).build();
 
 
-      //  return  httpSecurity.build();
-
-
     }
 
 
@@ -89,27 +91,29 @@ public class OAuthServerConfig {
 
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
-                .scope( OidcScopes.ADDRESS)
-                .scope(OidcScopes.EMAIL)
-                .scope(OidcScopes.PHONE)
+//                .scope( OidcScopes.ADDRESS)
+//                .scope(OidcScopes.EMAIL)
+//                .scope(OidcScopes.PHONE)
                 //.scope("read")
                 .clientSettings( ClientSettings.builder().requireAuthorizationConsent(true).build())
+                .tokenSettings( tokenSettings() )
                 .build();
 
         return  new InMemoryRegisteredClientRepository(registeredClient);
     }
+    private TokenSettings tokenSettings() {
+        return TokenSettings.builder()
 
+                .accessTokenTimeToLive( Duration.ofHours(24))
+                .refreshTokenTimeToLive(Duration.ofDays(7))
+                .build();
+    }
 
 
     @Bean
     public AuthorizationServerSettings authorizationServerSettings(){
         return AuthorizationServerSettings.builder().build();
     }
-
-
-
-
-
 
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
@@ -154,17 +158,6 @@ public class OAuthServerConfig {
         return new CustomJwtTokenCustomizer();
     }
 
-//    @Bean
-//    UserDetailsService inMemoryUserDetailsManager(){
-//
-//        User.UserBuilder userBuilder = User.builder();
-//        UserDetails user=userBuilder.username("user").password("user").roles("USER").build();
-//         UserDetails author=userBuilder.username("author").password("author").roles("AUTHOR" ,"USER").build();
-//        UserDetails admin=userBuilder.username("admin").password("admin").roles("ADMIN").build();
-//
-//         return new InMemoryUserDetailsManager(user,author,admin);
-//
-//    }
 
 
 

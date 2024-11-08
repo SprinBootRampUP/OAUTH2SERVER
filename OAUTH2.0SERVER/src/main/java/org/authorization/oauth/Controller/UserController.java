@@ -24,14 +24,10 @@ private UserService userService;
 
     @PostMapping("/register")
     public ResponseEntity<Map<String,String>> register(@RequestBody() User user){
-
-
         userService.register(user);
-
         Map<String,String> response = new HashMap<>();
         response.put("message" , "User registered");
         response.put("StatusCode" , "200");
-
         return  ResponseEntity.ok( response );
 
 
