@@ -1,0 +1,7 @@
+
+
+Add roles claim in the JWT
+
+OAuth2TokenCustomizer<JwtEncodingContext> - interface
+implements this interface and make that class as a bean.
+
