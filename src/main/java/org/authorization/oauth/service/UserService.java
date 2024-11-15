@@ -30,15 +30,10 @@ public class UserService {
 
         List<Role> roles = new ArrayList<>();
 
-        for(String roleName :user.getRoleNames()){
-            RoleEnum roleEnum = RoleEnum.valueOf(roleName);
-           Role role =  roleRepository.findRoleByName(roleEnum).orElseThrow( () ->
-                new IllegalArgumentException( "Role " + roleName + " not found" )
-            );
-
-           roles.add(role);
-        }
-
+        Role role =  roleRepository.findRoleByName(RoleEnum.USER).orElseThrow( () ->
+                new IllegalArgumentException( "Role " + RoleEnum.USER + " not found" )
+        );
+        roles.add(role);
         user.setPassword(passwordEncoder.encode(user.getPassword())  );
         user.setRoles(roles);
         userRepository.save(user);

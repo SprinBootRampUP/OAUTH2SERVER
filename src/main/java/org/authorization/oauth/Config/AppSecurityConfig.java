@@ -35,10 +35,10 @@ public class AppSecurityConfig {
     public SecurityFilterChain appSecurityFilterChain(HttpSecurity httpSecurity)throws  Exception{
 
         httpSecurity
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/oauth/register","/oauth/test"))
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/oauth/api/register","/oauth/test"))
 
                 .authorizeHttpRequests( request -> request
-                        .requestMatchers("/oauth/register" ,"/oauth/test").permitAll()
+                        .requestMatchers("/oauth/api/register" ,"/oauth/test").permitAll()
 
                         .anyRequest().authenticated()
                 )

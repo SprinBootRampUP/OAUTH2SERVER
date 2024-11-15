@@ -3,6 +3,7 @@ package org.authorization.oauth.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.validation.constraints.*;
 import java.util.List;
 
 @Entity
@@ -13,14 +14,24 @@ public class User {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
-@Column(unique = true)
+    @Size(min = 3, max = 50, message = "Username must be between 3 and 50 characters")
+    @NotEmpty(message = "Username is required")
+    @Column(unique = true)
     private String userName ;
 
-
+    @NotEmpty(message = "Password is required")
+    @Size(min = 8, message = "Password must be at least 8 characters long")
     private String password;
 
+    @NotEmpty(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String email;
+
+    @NotNull(message = "Phone number is required")
+    @Pattern(regexp = "^\\d{10}$", message = "Phone number must be 10 digits")
     private Long phoneNumber;
+
+    @NotEmpty(message = "Address is required")
     private String address;
 
     @ManyToMany( fetch = FetchType.EAGER)
@@ -35,8 +46,6 @@ public class User {
     )
     private List<Role> roles;
 
-    @Transient
-    private List<String> roleNames;
 
     @Override
     public String toString() {

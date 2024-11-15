@@ -13,6 +13,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class UserController {
 private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<Map<String,String>> register(@RequestBody() User user){
+    public ResponseEntity<Map<String,String>> register(@RequestBody @Valid User user){
         userService.register(user);
         Map<String,String> response = new HashMap<>();
         response.put("message" , "User registered");
