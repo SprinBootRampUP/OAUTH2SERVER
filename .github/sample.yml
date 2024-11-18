@@ -1,0 +1,19 @@
+name: Course preparation
+on :
+  pull_request:
+     branches :
+        - main
+  push :
+     branches :
+        - main
+  workflow_dispatch :      
+
+jobs :
+  practice :
+     name : Job One
+     runs-on : ubuntu-latest
+
+     steps :
+       - name : step one
+       - run : "echo hello"
+  
