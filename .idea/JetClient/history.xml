@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="History">
+    <option name="requestHistoryStates">
+      <list>
+        <requestHistoryState>
+          <option name="dateTime" value="1731918696789" />
+          <option name="id" value="f983477e-3735-47c2-893e-54dc891fdbf5" />
+          <option name="request">
+            <requestState>
+              <option name="auth">
+                <authState>
+                  <option name="type" value="NO_AUTH" />
+                </authState>
+              </option>
+              <option name="body">
+                <bodyState>
+                  <option name="type" value="FORM_URL_ENCODED" />
+                  <option name="urlEncoded">
+                    <list>
+                      <urlEncodedParameterState>
+                        <option name="key" value="client_id" />
+                        <option name="value" value="resource_server" />
+                      </urlEncodedParameterState>
+                      <urlEncodedParameterState>
+                        <option name="key" value="client_secret" />
+                        <option name="value" value="secret" />
+                      </urlEncodedParameterState>
+                      <urlEncodedParameterState>
+                        <option name="key" value="redirect_uri" />
+                        <option name="value" value="http://localhost:3001/login/oauth/oauthserver" />
+                      </urlEncodedParameterState>
+                      <urlEncodedParameterState>
+                        <option name="key" value="grant_type" />
+                        <option name="value" value="authorization_code" />
+                      </urlEncodedParameterState>
+                      <urlEncodedParameterState>
+                        <option name="key" value="code" />
+                        <option name="value" value="vWOLlQ72gW4OtV3sKgx9Njs3kHXmL4UnEy6QL_qa-A2Aq5iY-Ubkg_z9SDvSwxJpFOvExczYQM0Iju8UABKkBH-JOkxTiirsU0ahpuhU0hTvxgXV4aEPI2eM7L0bVeCE" />
+                      </urlEncodedParameterState>
+                    </list>
+                  </option>
+                </bodyState>
+              </option>
+              <option name="description" value="/oauth2/token" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="Content-Type" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0730da28-1ce3-4238-bc37-8f7217540ab6" />
+              <option name="method" value="POST" />
+              <option name="name" value="2.code exchange with access_token" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="grant_type" />
+                    <option name="value" value="authorization_code" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="client_id" />
+                    <option name="value" value="resource_server" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="client_secret" />
+                    <option name="value" value="secret" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="redirect_uri" />
+                    <option name="value" value="http://localhost:3001/login/oauth/oauthserver" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="scope" />
+                    <option name="value" value="openid" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="code_challenge_method" />
+                    <option name="value" value="S256" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="code" />
+                    <option name="value" value="xSDKl2hr4_oI5kVflcl1Y_oRi2OwgJTl7rA31lBv2OU3rheqHjBVOCK3uLASZs3J_r0FhQbpyweknQoD8pWTr9R1zMhdJIvFqr7vtTXMZxG5MuLGd_At0ol6AibP8UYX" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="code_verifier" />
+                    <option name="value" value="-5s8QwgtWju00R6s7068rI-ao_3dxy-64J57oJpBVRdYd3sYJHveRonARs5hKy6Q7t3JDe4t9H5NpmhkYLV0gEwnBojg8CsNwW8V0AxenI---yHqz8a5iIUCpa8tDbYH" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="value" value="" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value="http://localhost:3006/oauth2/token" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6ImludmFsaWRfZ3JhbnQifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;invalid_grant&quot;&#10;}" />
+              <option name="code" value="400" />
+              <option name="contentType" value="application/json; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="X-Content-Type-Options" />
+                    <option name="value" value="nosniff" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="X-XSS-Protection" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Cache-Control" />
+                    <option name="value" value="no-cache, no-store, max-age=0, must-revalidate" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Pragma" />
+                    <option name="value" value="no-cache" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Expires" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="X-Frame-Options" />
+                    <option name="value" value="DENY" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json;charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Transfer-Encoding" />
+                    <option name="value" value="chunked" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Mon, 18 Nov 2024 08:31:36 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="close" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="f983477e-3735-47c2-893e-54dc891fdbf5" />
+              <option name="message" value="Bad Request" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;invalid_grant&quot;}" />
+              <option name="size" value="25" />
+              <option name="time" value="147" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="3df9cc9a-99fa-40d8-a5e3-b1ccebd662e8" />
+        </requestHistoryState>
+      </list>
+    </option>
+  </component>
+</project>

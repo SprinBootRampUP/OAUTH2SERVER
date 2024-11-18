@@ -1,0 +1,15 @@
+```toml
+name = 'approve author - resource'
+description = '/api/admin/approve'
+method = 'PUT'
+url = 'http://localhost:3008/api/admin/approve?id=10'
+sortWeight = 12000000
+id = '81b62cab-135b-41d6-b7cc-f39385506e94'
+
+[[queryParams]]
+key = 'id'
+value = '10'
+
+[auth.bearer]
+token = 'eyJraWQiOiJiYWQ5ZWY4Mi02YWMxLTQwYTctYTZmNS00YjEyM2UwMjcwMmIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4ODkyOSwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2NzUzMjksImlhdCI6MTczMTU4ODkyOSwidXNlcklkIjo2LCJqdGkiOiI0MTc3YTE3MS01NmY5LTQ2YjgtYWJkMC1hNTU1YTViNWFiZjEifQ.kn5xl9y6ZckWZ-c7I8OZsqQvw8zAsexg_ulpKP_MVFC8vfPzA3055Ma7T68rhwF4rA8eRmbAyu0UhcwXwiO6xbf7q9ROHAoxatUET_vQL57CbQGEgTEVzBAmgJPU-9gNdXfYKlY_sHNWuL3avoAKao2KTLflMMZl9P4okyzsALSYualzeprGMgbrMHfDQS6iVhoc6XAkB9NvdGv7slLGt6CehWC62hqmRYHNzHzNgvPADZSxgGyyOh2qb-di945jg3Gd73UZndl9eGiaUTsOJqovgxkuPzWU1jwFGZ_nCmc6VTxzb0k9IREg5PK50PWBMOlU_aKdB5O8fh7taaAfTg'
+```

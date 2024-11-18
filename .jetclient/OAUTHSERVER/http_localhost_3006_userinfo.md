@@ -1,0 +1,15 @@
+```toml
+name = 'http://localhost:3006/userinfo'
+description = '/userinfo'
+method = 'GET'
+url = 'http://localhost:3006/userinfo'
+sortWeight = 5000000
+id = 'e945901e-698c-49f0-9a15-9ae0a4b3ad73'
+
+[[headers]]
+key = 'Authorization'
+value = 'Bearer eyJraWQiOiJmNmZjYzk2Yy05NTQzLTQwMmUtOGQ5Yi1lZTNjYzU2OTRhNjQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoicmVzb3VyY2Vfc2VydmVyIiwibmJmIjoxNzMwOTY2MDExLCJzY29wZSI6WyJhZGRyZXNzIiwicGhvbmUiLCJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiXSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzA5NjYzMTEsImlhdCI6MTczMDk2NjAxMSwianRpIjoiY2U0MGE5NGUtNWRiZS00NjNiLWI2OTktNDhiYTc4YjZmMDQzIn0.JAe1vj3yJRSr-A1GEEoErF_kN9lhHN9cj2pHqBTCPFKpx8zhtuj10HrJ-zUtIZcaaSE1WqtrCyaV6c34UPz0VzEtmNuCmtkxGkk0rLD3XAr7GqqlwceuqyAhIp0nUfCny2_vhbUf_83iAgoZejqN0HrtXmjjPpSdewvDSjhsPluV8KEQVF5xd5utgqzBPY9o9REf0yK2iLFkKN1CNt1T4H2hUEn7Sn3pMX0VN4gVKHA6yg0G1BAST-0kKfsONkv2_CGXP0tDPBW6DRiwKxA8_-SX_0bXFFBVgSa0a8FvTIuIt-VLt1Zuyp0yhEjSxE_uUJROuVKkKkQOBF1XZ4GwBQ'
+
+[auth]
+type = 'NO_AUTH'
+```

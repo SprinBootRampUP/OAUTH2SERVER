@@ -1,0 +1,11 @@
+```toml
+name = 'get courses'
+description = '/api/course'
+method = 'GET'
+url = 'http://localhost:3008/api/course'
+sortWeight = 7000000
+id = '6c92bbc3-83bf-4963-8a3f-69320ae2bb1d'
+
+[auth.bearer]
+token = 'eyJraWQiOiI3NDczZmNjZi1jMjVkLTQ3ZjktOWE0Yy00OGRiMjY4ZDhlMWEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBVVRIT1IiLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzE5MTQyMDEsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJBVVRIT1IiLCJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMjAwMDYwMSwiaWF0IjoxNzMxOTE0MjAxLCJ1c2VySWQiOjQsImp0aSI6IjVmMzIyNjk0LTg2M2EtNDI5Yi04MzE1LTU1MWVjMjY4NjlmZCJ9.pcfHkilP8x9NPKnos88sZBZStjUblyVQLFzycp9t2TgtBn3oN4kM-oI26RhcRS-oq4fVlHc0N8-AK_JP2EDn6HwNGRjzTNmy9bOrhJi1AOvOi-lMLyU0PSV5gqsmuUUiU1cFaB-hwTHDv3_cxJqsN-_NK4PuetAFTBErpPIq-Uh6c4NoxlYxygfwoQAokkgU0FYSm9mI0RCsiQue-tZ5F64JcbSxdBo0UocisNM4Yu1HO941Q2YoyCl10KAFxB21bq77usrkgFR_kfgaYmELDtA3VLQsdxG0g_lhy2h5_EtB0e6WsdDLwsAT2wwCE4jCZ4Uw9R9NRRDH4lsXO6jbkQ'
+```

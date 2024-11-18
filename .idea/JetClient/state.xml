@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="apis">
+            <list>
+              <integrationProperties>
+                <option name="name" value="API" />
+              </integrationProperties>
+              <integrationProperties>
+                <option name="name" value="API" />
+              </integrationProperties>
+            </list>
+          </option>
+          <option name="environmentGroups">
+            <list>
+              <environmentGroupState>
+                <option name="name" value="Default" />
+              </environmentGroupState>
+            </list>
+          </option>
+          <option name="folders">
+            <list>
+              <folderState>
+                <option name="id" value="46d78d37-0474-403d-a02a-2e289a5717b6" />
+                <option name="name" value="OAUTHSERVER" />
+                <option name="requests">
+                  <list>
+                    <requestState>
+                      <option name="description" value="/oauth2/authorize" />
+                      <option name="id" value="a6b1c2ea-816d-4c19-b106-99aff1b0eeb0" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="1.Authorize" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="key" value="grant_type" />
+                            <option name="value" value="client_credentials" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="key" value="client_id" />
+                            <option name="value" value="resource_server" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="key" value="client_secret" />
+                            <option name="value" value="secret" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="key" value="response_type" />
+                            <option name="value" value="code" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="key" value="scope" />
+                            <option name="value" value="openid" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="key" value="redirect_uri" />
+                            <option name="value" value="e3f19FLemF2B16o9uOrT7XigYTd302P-9gvELVtdNfVVqvFIqUqOo62_lHz8-qAhotyh2Th_d3ePJaS9A3MzOPQsDeg27LzQdz7012vtZJPxREAdhy5Lj6LlGejiifgU" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="1000000" />
+                      <option name="url" value="http://localhost:3006/oauth2/authorize?grant_type=client_credentials&amp;client_id=resource_server&amp;client_secret=secret&amp;response_type=code&amp;scope=openid&amp;redirect_uri=e3f19FLemF2B16o9uOrT7XigYTd302P-9gvELVtdNfVVqvFIqUqOo62_lHz8-qAhotyh2Th_d3ePJaS9A3MzOPQsDeg27LzQdz7012vtZJPxREAdhy5Lj6LlGejiifgU" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="type" value="NO_AUTH" />
+                        </authState>
+                      </option>
+                      <option name="body">
+                        <bodyState>
+                          <option name="type" value="FORM_URL_ENCODED" />
+                          <option name="urlEncoded">
+                            <list>
+                              <urlEncodedParameterState>
+                                <option name="key" value="client_id" />
+                                <option name="value" value="resource_server" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="client_secret" />
+                                <option name="value" value="secret" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="redirect_uri" />
+                                <option name="value" value="http://localhost:3001/login/oauth/oauthserver" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="grant_type" />
+                                <option name="value" value="authorization_code" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="code" />
+                                <option name="value" value="vWOLlQ72gW4OtV3sKgx9Njs3kHXmL4UnEy6QL_qa-A2Aq5iY-Ubkg_z9SDvSwxJpFOvExczYQM0Iju8UABKkBH-JOkxTiirsU0ahpuhU0hTvxgXV4aEPI2eM7L0bVeCE" />
+                              </urlEncodedParameterState>
+                            </list>
+                          </option>
+                        </bodyState>
+                      </option>
+                      <option name="description" value="/oauth2/token" />
+                      <option name="headers">
+                        <list>
+                          <headerState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="Content-Type" />
+                          </headerState>
+                        </list>
+                      </option>
+                      <option name="id" value="0730da28-1ce3-4238-bc37-8f7217540ab6" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="2.code exchange with access_token" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="grant_type" />
+                            <option name="value" value="authorization_code" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="client_id" />
+                            <option name="value" value="resource_server" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="client_secret" />
+                            <option name="value" value="secret" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="redirect_uri" />
+                            <option name="value" value="http://localhost:3001/login/oauth/oauthserver" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="scope" />
+                            <option name="value" value="openid" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="code_challenge_method" />
+                            <option name="value" value="S256" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="code" />
+                            <option name="value" value="xSDKl2hr4_oI5kVflcl1Y_oRi2OwgJTl7rA31lBv2OU3rheqHjBVOCK3uLASZs3J_r0FhQbpyweknQoD8pWTr9R1zMhdJIvFqr7vtTXMZxG5MuLGd_At0ol6AibP8UYX" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="code_verifier" />
+                            <option name="value" value="-5s8QwgtWju00R6s7068rI-ao_3dxy-64J57oJpBVRdYd3sYJHveRonARs5hKy6Q7t3JDe4t9H5NpmhkYLV0gEwnBojg8CsNwW8V0AxenI---yHqz8a5iIUCpa8tDbYH" />
+                          </queryParamState>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="value" value="" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="2000000" />
+                      <option name="url" value="http://localhost:3006/oauth2/token" />
+                    </requestState>
+                    <requestState>
+                      <option name="body">
+                        <bodyState>
+                          <option name="type" value="FORM_URL_ENCODED" />
+                          <option name="urlEncoded">
+                            <list>
+                              <urlEncodedParameterState>
+                                <option name="key" value="grant_type" />
+                                <option name="value" value="refresh_token" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="client_id" />
+                                <option name="value" value="resource_server" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="key" value="client_secret" />
+                                <option name="value" value="secret" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="disabled" value="true" />
+                                <option name="key" value="redirect_uri" />
+                                <option name="value" value="http://localhost:3001/login/oauth/oauthserver" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="description" value="author" />
+                                <option name="key" value="refresh_token" />
+                                <option name="value" value="yatc0lQ7xmLAUh0HZXXELGG0FVCkA5Mx4yNwiV-fyWlRZbpa28J8hM8TXnbKGR0mIDdTuYP6aN08rV65w0mR044iq3P6mO58y14CA8QVqfTf9ebJqXN_ZWuL8Oe1ndIb" />
+                              </urlEncodedParameterState>
+                              <urlEncodedParameterState>
+                                <option name="description" value="admin" />
+                                <option name="disabled" value="true" />
+                                <option name="key" value="refresh_token" />
+                                <option name="value" value="wb-EcIkjPHrAZL_6LnjSNZUk2anbJPZUCVOhrNd9xdfnvlkt_OHcGGEGYQOirsn5CAa5dUcfBha1ELXh7hETx-mQtSJ7rMKidBpAnzQeAD5W5bpP4ZNgjbuUbzXOkuMA" />
+                              </urlEncodedParameterState>
+                            </list>
+                          </option>
+                        </bodyState>
+                      </option>
+                      <option name="description" value="/oauth2/token" />
+                      <option name="id" value="4b7ba250-7869-411d-b46c-d107705d1136" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="3.exchange refresh with access" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="grant_type" />
+                            <option name="value" value="" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="3000000" />
+                      <option name="url" value="http://localhost:3006/oauth2/token" />
+                    </requestState>
+                    <requestState>
+                      <option name="body">
+                        <bodyState>
+                          <option name="raw" value="{&#10;    &quot;userName&quot; :&quot;sharan&quot;,&#10;    &quot;password&quot; : &quot;sharan&quot;,&#10;&quot;phoneNumber&quot; :&quot;89875437&quot;,&#10;&quot;address&quot; :&quot;chennai&quot;,&#10;    &quot;email&quot; : &quot;mail@gmail.com&quot;&#10;&#10;}" />
+                          <option name="type" value="JSON" />
+                        </bodyState>
+                      </option>
+                      <option name="description" value="/oauth/api/register" />
+                      <option name="id" value="d6fcf2ae-ee76-47ef-857a-578a88563604" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="Register" />
+                      <option name="sortWeight" value="4000000" />
+                      <option name="url" value="http://localhost:3006/oauth/api/register" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="type" value="NO_AUTH" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/userinfo" />
+                      <option name="headers">
+                        <list>
+                          <headerState>
+                            <option name="key" value="Authorization" />
+                            <option name="value" value="Bearer eyJraWQiOiJmNmZjYzk2Yy05NTQzLTQwMmUtOGQ5Yi1lZTNjYzU2OTRhNjQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoicmVzb3VyY2Vfc2VydmVyIiwibmJmIjoxNzMwOTY2MDExLCJzY29wZSI6WyJhZGRyZXNzIiwicGhvbmUiLCJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiXSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzA5NjYzMTEsImlhdCI6MTczMDk2NjAxMSwianRpIjoiY2U0MGE5NGUtNWRiZS00NjNiLWI2OTktNDhiYTc4YjZmMDQzIn0.JAe1vj3yJRSr-A1GEEoErF_kN9lhHN9cj2pHqBTCPFKpx8zhtuj10HrJ-zUtIZcaaSE1WqtrCyaV6c34UPz0VzEtmNuCmtkxGkk0rLD3XAr7GqqlwceuqyAhIp0nUfCny2_vhbUf_83iAgoZejqN0HrtXmjjPpSdewvDSjhsPluV8KEQVF5xd5utgqzBPY9o9REf0yK2iLFkKN1CNt1T4H2hUEn7Sn3pMX0VN4gVKHA6yg0G1BAST-0kKfsONkv2_CGXP0tDPBW6DRiwKxA8_-SX_0bXFFBVgSa0a8FvTIuIt-VLt1Zuyp0yhEjSxE_uUJROuVKkKkQOBF1XZ4GwBQ" />
+                          </headerState>
+                        </list>
+                      </option>
+                      <option name="id" value="e945901e-698c-49f0-9a15-9ae0a4b3ad73" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="http://localhost:3006/userinfo" />
+                      <option name="sortWeight" value="5000000" />
+                      <option name="url" value="http://localhost:3006/userinfo" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiI3NDczZmNjZi1jMjVkLTQ3ZjktOWE0Yy00OGRiMjY4ZDhlMWEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBVVRIT1IiLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzE5MTQyMDEsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJBVVRIT1IiLCJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMjAwMDYwMSwiaWF0IjoxNzMxOTE0MjAxLCJ1c2VySWQiOjQsImp0aSI6IjVmMzIyNjk0LTg2M2EtNDI5Yi04MzE1LTU1MWVjMjY4NjlmZCJ9.pcfHkilP8x9NPKnos88sZBZStjUblyVQLFzycp9t2TgtBn3oN4kM-oI26RhcRS-oq4fVlHc0N8-AK_JP2EDn6HwNGRjzTNmy9bOrhJi1AOvOi-lMLyU0PSV5gqsmuUUiU1cFaB-hwTHDv3_cxJqsN-_NK4PuetAFTBErpPIq-Uh6c4NoxlYxygfwoQAokkgU0FYSm9mI0RCsiQue-tZ5F64JcbSxdBo0UocisNM4Yu1HO941Q2YoyCl10KAFxB21bq77usrkgFR_kfgaYmELDtA3VLQsdxG0g_lhy2h5_EtB0e6WsdDLwsAT2wwCE4jCZ4Uw9R9NRRDH4lsXO6jbkQ" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="body">
+                        <bodyState>
+                          <option name="raw" value="{&#10;  &quot;courseTitle&quot;: &quot;refcb&quot;,&#10;  &quot;courseLevel&quot;: &quot;BEGINNER&quot;,&#10;  &quot;price&quot;: &quot;string&quot;,&#10;  &quot;sections&quot;: [&#10;    {&#10;      &quot;name&quot;: &quot;string&quot;,&#10;      &quot;orderNumber&quot;: &quot;string&quot;,&#10;      &quot;lectures&quot;: [&#10;        {&#10;          &quot;name&quot;: &quot;string&quot;,&#10;          &quot;resource&quot;: {&#10;            &quot;name&quot;: &quot;string&quot;,&#10;            &quot;size&quot;: 0,&#10;            &quot;url&quot;: &quot;string&quot;&#10;          }&#10;        }&#10;      ]&#10;    }&#10;  ]&#10;}" />
+                          <option name="type" value="JSON" />
+                        </bodyState>
+                      </option>
+                      <option name="description" value="/api/course/create" />
+                      <option name="headers">
+                        <list>
+                          <headerState>
+                            <option name="disabled" value="true" />
+                            <option name="key" value="Authorization" />
+                            <option name="value" value="Bearer eyJraWQiOiJmYTgxZGQ3Yi1jMjViLTQxZjItODczYi04NjNjYzNkNzI3MDgiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBVVRIT1IiLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzEwNDU1ODcsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJBVVRIT1IiLCJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMTA0NTg4NywiaWF0IjoxNzMxMDQ1NTg3LCJ1c2VySWQiOjQsImp0aSI6IjdiNGQwMGYyLWE4MDEtNDgxMS04MjAxLTY2NmFkYjZiNTI4MiJ9.EKM3Bu7kAES4YCa3u8a-J0OLuQ6UCDIE26c7MHxi0oRE5a4i0ZfCKiXlLgfZBQeT-hsavwH1Ur1UEeZqiosJs-K3M7hKTji8qJet9Qhnofv8M8nLOoZ9isCbMiI2vL7ghRitWkO2CbaxIX966qgIRjm5KYTqDvs1LEG3wgm4YhkscA3BK0WzH7Zb_cIf9wI85vPWhLmFXwjPtb1BhaenxK6EHIGTtroF8cSf7cGysDkhx9HgYEEhAngqH9dsTCvIDHUabrHQftZS-J6E9rRV0CUxS-1fdGIFiGgTn4p1wC15N4e7loA14oqNB0ilIn5my--KXkhauLPY7x-RTN03sw" />
+                          </headerState>
+                        </list>
+                      </option>
+                      <option name="id" value="a2b660cc-42eb-4bfb-aa6c-b23130a3f3e7" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="create course" />
+                      <option name="sortWeight" value="6000000" />
+                      <option name="url" value="http://localhost:3008/api/course/create" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiI3NDczZmNjZi1jMjVkLTQ3ZjktOWE0Yy00OGRiMjY4ZDhlMWEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBVVRIT1IiLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzE5MTQyMDEsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJBVVRIT1IiLCJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMjAwMDYwMSwiaWF0IjoxNzMxOTE0MjAxLCJ1c2VySWQiOjQsImp0aSI6IjVmMzIyNjk0LTg2M2EtNDI5Yi04MzE1LTU1MWVjMjY4NjlmZCJ9.pcfHkilP8x9NPKnos88sZBZStjUblyVQLFzycp9t2TgtBn3oN4kM-oI26RhcRS-oq4fVlHc0N8-AK_JP2EDn6HwNGRjzTNmy9bOrhJi1AOvOi-lMLyU0PSV5gqsmuUUiU1cFaB-hwTHDv3_cxJqsN-_NK4PuetAFTBErpPIq-Uh6c4NoxlYxygfwoQAokkgU0FYSm9mI0RCsiQue-tZ5F64JcbSxdBo0UocisNM4Yu1HO941Q2YoyCl10KAFxB21bq77usrkgFR_kfgaYmELDtA3VLQsdxG0g_lhy2h5_EtB0e6WsdDLwsAT2wwCE4jCZ4Uw9R9NRRDH4lsXO6jbkQ" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/course" />
+                      <option name="id" value="6c92bbc3-83bf-4963-8a3f-69320ae2bb1d" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="get courses" />
+                      <option name="sortWeight" value="7000000" />
+                      <option name="url" value="http://localhost:3008/api/course" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiJmYTgxZGQ3Yi1jMjViLTQxZjItODczYi04NjNjYzNkNzI3MDgiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTA1MTAwNiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMTA1MTMwNiwiaWF0IjoxNzMxMDUxMDA2LCJ1c2VySWQiOjIsImp0aSI6ImIzNGZjZjExLTI3OGYtNDhiOS04ZGY5LWI4NTMyMWQ4ZTBlYSJ9.tAQwcnOzioBWBIv_5iX0gCrWvMMH7dtVLehs-u012-RXWWhtxjDrsk2E8R5zlzn-LQW8wk7aSi5jJBl4V7EtFADobylqwm8bJlyR0IWs-ISAWx2fR2r5lavyUJRPwPu2jKkX3YWZEA-AA9GBdbEK6n_REgJ2KgwCl0JxBljh3pMJqbm6pf09SOfI0PwBVVc1v07WUkO0yKZnMsZ9Yrn5UxkNtrrtdiEC_gnzE4gSWcqRlDAtXl4C5PYHZ1MJH-l4rwmMNl3H9CnY3nih--cyzuGBj-OIucWE4qhEI9j3urx5rmQi9jl_0rNED4l5eKPBbG_80UB0pestuDMdLXwHKw" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/course/approve" />
+                      <option name="id" value="af69f0aa-38fd-4724-aef3-2751f2e742be" />
+                      <option name="method" value="PUT" />
+                      <option name="name" value="approve course" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="key" value="courseId" />
+                            <option name="value" value="1" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="8000000" />
+                      <option name="url" value="http://localhost:3008/api/course/approve?courseId=1" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4NzQ2OSwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2NzM4NjksImlhdCI6MTczMTU4NzQ2OSwidXNlcklkIjo2LCJqdGkiOiJmZTRkM2ZjYi04MGFmLTQ3OTAtODNkMS0yZGFjNzQ3MGYxMzUifQ.Gd7qnpoD19VnCDeMF5Wmu8ZLmpEdWSez2WvHcUYYRZC1G21UJn3SQ3HHYC2zSJF9uUAFQpdIiqiY0rkKhvGvrEkwlPFx3rskuh4NR1ePLZFDnkm1CnOzwNoFKZQ5YcWb2kN9F1ftMWOGwAZGOrIGV37TsWRIVRpiOcYvenOBgT3eawAJp2GbLyAv_1oWBHI6thmMCoNhpXf7lAZ9s8vt7HrOHYreP3YaMArWxQCPhliTrJDvpKdoEYCkvprOAdrIJEuz2M6BmH7SpiCv0DysGCt0KKyIdbqsBtgoWizpZyrrTu3V7i6ToLNQVZ9AE4ajucjAESOojb622-xXE03iFw" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/course/unapproved" />
+                      <option name="id" value="06a3841c-3e91-491f-b567-57f4a2fb73a0" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="Get unapproved courses" />
+                      <option name="sortWeight" value="9000000" />
+                      <option name="url" value="http://localhost:3008/api/course/unapproved" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4MjU2Miwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2Njg5NjIsImlhdCI6MTczMTU4MjU2MiwidXNlcklkIjo2LCJqdGkiOiI1MDZlODQxZS1hZDk3LTQ4MjUtOWU2NC05MzRkZDZjMzI0NGQifQ.hKTqmDn6AUjwN33SBX1h3lMSPpuY334mAze1HN2DtlAkBAZ9TcUroWZnnpX7MezVe2XBkklaCCPwfbNj8j3PnpOuq2gl-zmVNZZUjVXzMshAUTLMYFV1tBKj_zcC8QvtccsgQezUvPtnpul69BOZ6bEBBFj2RFPcV0t0Iy5VTlHiuT_-jo0vvL3hQKW2t6CPG8okI7PUndUscW8_68hV_IlnlUb_cWpXTjmYxRhL52yySmNd79qJT3HjakMHlc4fPHe9XNRxT6vkhaIuaC62PYyBsHmNEbqMC3M31QDxWE7UOIGBWttgtKhvKF0E5SBjZAcaCDpP7iMdpZrCkhqMYA" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/oauth/api/approve" />
+                      <option name="id" value="01744c8c-ddb1-4583-bea3-a5db20080f66" />
+                      <option name="method" value="PUT" />
+                      <option name="name" value="Approve author - auth" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="key" value="id" />
+                            <option name="value" value="10" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="10000000" />
+                      <option name="url" value="http://localhost:3006/oauth/api/approve?id=10" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzaGFyYW4iLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzE1ODc4MzQsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMTY3NDIzNCwiaWF0IjoxNzMxNTg3ODM0LCJ1c2VySWQiOjEwLCJqdGkiOiIyYzY5YzBjNy1hN2Q1LTRjZDAtOWExMi1mNWI3M2E2OWNiNjkifQ.LmrssbEo8ksiPJox3DTlTsC-PwMuKffEHdVrOaOvUN0a9djYpFINx1FMcdrLaCVyQBhemgnf2KavHKzlFamK_K8jQrUmkGvQOnoJw-gPvStOJAVJKvOtsYFGRYQbK4zBEYQ26rAuhlZlBGJSY0z524OsVbJSKBzbb0qJaH7Abquhi4FwnzD3cZfdHdfmbEcCOHYODsB8UqxK4S3-alSbqTpgzGcFeua23SweE8zblikVyWw-HBWUgb1l2eIhazjM7PBiqrfpPZPkKa3MxOy_WM-svCbTPOmzqcqf2LKhKK9r-hUxht1_BqIA9uXVriiQjfwl6eievuyP8Ng0EUnc9A" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/admin/requestauthorrole" />
+                      <option name="id" value="d0d2c371-a952-4efa-8092-0597c5e1003d" />
+                      <option name="method" value="POST" />
+                      <option name="name" value="request author role" />
+                      <option name="sortWeight" value="11000000" />
+                      <option name="url" value="http://localhost:3008/api/admin/requestauthorrole" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiJiYWQ5ZWY4Mi02YWMxLTQwYTctYTZmNS00YjEyM2UwMjcwMmIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4ODkyOSwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2NzUzMjksImlhdCI6MTczMTU4ODkyOSwidXNlcklkIjo2LCJqdGkiOiI0MTc3YTE3MS01NmY5LTQ2YjgtYWJkMC1hNTU1YTViNWFiZjEifQ.kn5xl9y6ZckWZ-c7I8OZsqQvw8zAsexg_ulpKP_MVFC8vfPzA3055Ma7T68rhwF4rA8eRmbAyu0UhcwXwiO6xbf7q9ROHAoxatUET_vQL57CbQGEgTEVzBAmgJPU-9gNdXfYKlY_sHNWuL3avoAKao2KTLflMMZl9P4okyzsALSYualzeprGMgbrMHfDQS6iVhoc6XAkB9NvdGv7slLGt6CehWC62hqmRYHNzHzNgvPADZSxgGyyOh2qb-di945jg3Gd73UZndl9eGiaUTsOJqovgxkuPzWU1jwFGZ_nCmc6VTxzb0k9IREg5PK50PWBMOlU_aKdB5O8fh7taaAfTg" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/admin/approve" />
+                      <option name="id" value="81b62cab-135b-41d6-b7cc-f39385506e94" />
+                      <option name="method" value="PUT" />
+                      <option name="name" value="approve author - resource" />
+                      <option name="queryParams">
+                        <list>
+                          <queryParamState>
+                            <option name="key" value="id" />
+                            <option name="value" value="10" />
+                          </queryParamState>
+                        </list>
+                      </option>
+                      <option name="sortWeight" value="12000000" />
+                      <option name="url" value="http://localhost:3008/api/admin/approve?id=10" />
+                    </requestState>
+                    <requestState>
+                      <option name="auth">
+                        <authState>
+                          <option name="bearer">
+                            <nE>
+                              <option name="token" value="eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4NzQ2OSwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2NzM4NjksImlhdCI6MTczMTU4NzQ2OSwidXNlcklkIjo2LCJqdGkiOiJmZTRkM2ZjYi04MGFmLTQ3OTAtODNkMS0yZGFjNzQ3MGYxMzUifQ.Gd7qnpoD19VnCDeMF5Wmu8ZLmpEdWSez2WvHcUYYRZC1G21UJn3SQ3HHYC2zSJF9uUAFQpdIiqiY0rkKhvGvrEkwlPFx3rskuh4NR1ePLZFDnkm1CnOzwNoFKZQ5YcWb2kN9F1ftMWOGwAZGOrIGV37TsWRIVRpiOcYvenOBgT3eawAJp2GbLyAv_1oWBHI6thmMCoNhpXf7lAZ9s8vt7HrOHYreP3YaMArWxQCPhliTrJDvpKdoEYCkvprOAdrIJEuz2M6BmH7SpiCv0DysGCt0KKyIdbqsBtgoWizpZyrrTu3V7i6ToLNQVZ9AE4ajucjAESOojb622-xXE03iFw" />
+                            </nE>
+                          </option>
+                          <option name="type" value="BEARER" />
+                        </authState>
+                      </option>
+                      <option name="description" value="/api/admin/authorRequests" />
+                      <option name="headers">
+                        <list>
+                          <headerState>
+                            <option name="description" value="author" />
+                            <option name="disabled" value="true" />
+                            <option name="key" value="Authorization" />
+                            <option name="value" value="eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4NzQ2OSwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2NzM4NjksImlhdCI6MTczMTU4NzQ2OSwidXNlcklkIjo2LCJqdGkiOiJmZTRkM2ZjYi04MGFmLTQ3OTAtODNkMS0yZGFjNzQ3MGYxMzUifQ.Gd7qnpoD19VnCDeMF5Wmu8ZLmpEdWSez2WvHcUYYRZC1G21UJn3SQ3HHYC2zSJF9uUAFQpdIiqiY0rkKhvGvrEkwlPFx3rskuh4NR1ePLZFDnkm1CnOzwNoFKZQ5YcWb2kN9F1ftMWOGwAZGOrIGV37TsWRIVRpiOcYvenOBgT3eawAJp2GbLyAv_1oWBHI6thmMCoNhpXf7lAZ9s8vt7HrOHYreP3YaMArWxQCPhliTrJDvpKdoEYCkvprOAdrIJEuz2M6BmH7SpiCv0DysGCt0KKyIdbqsBtgoWizpZyrrTu3V7i6ToLNQVZ9AE4ajucjAESOojb622-xXE03iFw" />
+                          </headerState>
+                          <headerState>
+                            <option name="description" value="user" />
+                            <option name="disabled" value="true" />
+                            <option name="key" value="Authorization" />
+                            <option name="value" value="Bearer " />
+                          </headerState>
+                        </list>
+                      </option>
+                      <option name="id" value="34d90217-550e-4b12-a679-5f7a21770853" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="get author requests" />
+                      <option name="sortWeight" value="13000000" />
+                      <option name="url" value="http://localhost:3008/api/admin/authorRequests" />
+                    </requestState>
+                    <requestState>
+                      <option name="id" value="df0975c3-63d2-49c7-a58b-18a9abc91f39" />
+                      <option name="method" value="GET" />
+                      <option name="name" value="New Request" />
+                      <option name="sortWeight" value="14000000" />
+                    </requestState>
+                  </list>
+                </option>
+                <option name="sortWeight" value="1000000" />
+              </folderState>
+            </list>
+          </option>
+          <option name="id" value="3df9cc9a-99fa-40d8-a5e3-b1ccebd662e8" />
+          <option name="name" value="Oauth Server" />
+          <option name="selectedEnvironmentIds">
+            <map>
+              <entry key="default" />
+            </map>
+          </option>
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="autoSync" value="true" />
+              <option name="folderPath" value="D:\OAUTH2SERVER\.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="556c0803-b75e-47cd-bbd8-daaf86b98343" />
+    <option name="version" value="4" />
+  </component>
+</project>

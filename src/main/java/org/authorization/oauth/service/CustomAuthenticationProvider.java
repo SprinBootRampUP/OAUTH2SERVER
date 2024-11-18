@@ -13,11 +13,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomAuthenticationProvider  implements AuthenticationProvider {
 
-    @Autowired
-    private CustomUserDetailsService customUserDetailsService;
+    private final CustomUserDetailsService customUserDetailsService;
+
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    public CustomAuthenticationProvider(CustomUserDetailsService customUserDetailsService ,  PasswordEncoder passwordEncoder ) {
+        this.customUserDetailsService = customUserDetailsService;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

@@ -1,5 +1,6 @@
 package org.authorization.oauth.Controller;
 
+import org.authorization.oauth.DTOS.UserDTO;
 import org.authorization.oauth.Entity.User;
 import org.authorization.oauth.repository.UserRepository;
 import org.authorization.oauth.service.UserService;
@@ -25,8 +26,8 @@ public class UserController {
 private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<Map<String,String>> register(@RequestBody @Valid User user){
-        userService.register(user);
+    public ResponseEntity<Map<String,String>> register(@RequestBody UserDTO userDTO){
+        userService.register(userDTO);
         Map<String,String> response = new HashMap<>();
         response.put("message" , "User registered");
         return  ResponseEntity.ok( response );

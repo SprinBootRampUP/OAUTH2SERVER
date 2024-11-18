@@ -1,0 +1,15 @@
+```toml
+name = 'Approve author - auth'
+description = '/oauth/api/approve'
+method = 'PUT'
+url = 'http://localhost:3006/oauth/api/approve?id=10'
+sortWeight = 10000000
+id = '01744c8c-ddb1-4583-bea3-a5db20080f66'
+
+[[queryParams]]
+key = 'id'
+value = '10'
+
+[auth.bearer]
+token = 'eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTU4MjU2Miwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDYiLCJleHAiOjE3MzE2Njg5NjIsImlhdCI6MTczMTU4MjU2MiwidXNlcklkIjo2LCJqdGkiOiI1MDZlODQxZS1hZDk3LTQ4MjUtOWU2NC05MzRkZDZjMzI0NGQifQ.hKTqmDn6AUjwN33SBX1h3lMSPpuY334mAze1HN2DtlAkBAZ9TcUroWZnnpX7MezVe2XBkklaCCPwfbNj8j3PnpOuq2gl-zmVNZZUjVXzMshAUTLMYFV1tBKj_zcC8QvtccsgQezUvPtnpul69BOZ6bEBBFj2RFPcV0t0Iy5VTlHiuT_-jo0vvL3hQKW2t6CPG8okI7PUndUscW8_68hV_IlnlUb_cWpXTjmYxRhL52yySmNd79qJT3HjakMHlc4fPHe9XNRxT6vkhaIuaC62PYyBsHmNEbqMC3M31QDxWE7UOIGBWttgtKhvKF0E5SBjZAcaCDpP7iMdpZrCkhqMYA'
+```

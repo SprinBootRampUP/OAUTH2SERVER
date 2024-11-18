@@ -1,0 +1,11 @@
+```toml
+name = 'request author role'
+description = '/api/admin/requestauthorrole'
+method = 'POST'
+url = 'http://localhost:3008/api/admin/requestauthorrole'
+sortWeight = 11000000
+id = 'd0d2c371-a952-4efa-8092-0597c5e1003d'
+
+[auth.bearer]
+token = 'eyJraWQiOiIxYjVhZjM3ZS04MjVkLTQ4NDgtODdjZS02ZmFjMDBmYzFiYjYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzaGFyYW4iLCJhdWQiOiJyZXNvdXJjZV9zZXJ2ZXIiLCJuYmYiOjE3MzE1ODc4MzQsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlcyI6WyJVU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMTY3NDIzNCwiaWF0IjoxNzMxNTg3ODM0LCJ1c2VySWQiOjEwLCJqdGkiOiIyYzY5YzBjNy1hN2Q1LTRjZDAtOWExMi1mNWI3M2E2OWNiNjkifQ.LmrssbEo8ksiPJox3DTlTsC-PwMuKffEHdVrOaOvUN0a9djYpFINx1FMcdrLaCVyQBhemgnf2KavHKzlFamK_K8jQrUmkGvQOnoJw-gPvStOJAVJKvOtsYFGRYQbK4zBEYQ26rAuhlZlBGJSY0z524OsVbJSKBzbb0qJaH7Abquhi4FwnzD3cZfdHdfmbEcCOHYODsB8UqxK4S3-alSbqTpgzGcFeua23SweE8zblikVyWw-HBWUgb1l2eIhazjM7PBiqrfpPZPkKa3MxOy_WM-svCbTPOmzqcqf2LKhKK9r-hUxht1_BqIA9uXVriiQjfwl6eievuyP8Ng0EUnc9A'
+```

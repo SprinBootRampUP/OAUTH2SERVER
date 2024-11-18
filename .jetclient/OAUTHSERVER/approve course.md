@@ -1,0 +1,15 @@
+```toml
+name = 'approve course'
+description = '/api/course/approve'
+method = 'PUT'
+url = 'http://localhost:3008/api/course/approve?courseId=1'
+sortWeight = 8000000
+id = 'af69f0aa-38fd-4724-aef3-2751f2e742be'
+
+[[queryParams]]
+key = 'courseId'
+value = '1'
+
+[auth.bearer]
+token = 'eyJraWQiOiJmYTgxZGQ3Yi1jMjViLTQxZjItODczYi04NjNjYzNkNzI3MDgiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTczMTA1MTAwNiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVzIjpbIkFETUlOIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwNiIsImV4cCI6MTczMTA1MTMwNiwiaWF0IjoxNzMxMDUxMDA2LCJ1c2VySWQiOjIsImp0aSI6ImIzNGZjZjExLTI3OGYtNDhiOS04ZGY5LWI4NTMyMWQ4ZTBlYSJ9.tAQwcnOzioBWBIv_5iX0gCrWvMMH7dtVLehs-u012-RXWWhtxjDrsk2E8R5zlzn-LQW8wk7aSi5jJBl4V7EtFADobylqwm8bJlyR0IWs-ISAWx2fR2r5lavyUJRPwPu2jKkX3YWZEA-AA9GBdbEK6n_REgJ2KgwCl0JxBljh3pMJqbm6pf09SOfI0PwBVVc1v07WUkO0yKZnMsZ9Yrn5UxkNtrrtdiEC_gnzE4gSWcqRlDAtXl4C5PYHZ1MJH-l4rwmMNl3H9CnY3nih--cyzuGBj-OIucWE4qhEI9j3urx5rmQi9jl_0rNED4l5eKPBbG_80UB0pestuDMdLXwHKw'
+```

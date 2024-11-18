@@ -1,5 +1,7 @@
 package org.authorization.oauth.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.authorization.oauth.DTOS.UserDTO;
 import org.authorization.oauth.Entity.Role;
 import org.authorization.oauth.Entity.RoleEnum;
 import org.authorization.oauth.Entity.User;
@@ -26,21 +28,22 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public void register(User user){
+    @Autowired
+    private ObjectMapper objectMapper;
 
+    public void register(UserDTO userDTO){
+       User user= objectMapper.convertValue(userDTO, User.class);
         List<Role> roles = new ArrayList<>();
-
         Role role =  roleRepository.findRoleByName(RoleEnum.USER).orElseThrow( () ->
                 new IllegalArgumentException( "Role " + RoleEnum.USER + " not found" )
         );
         roles.add(role);
-        user.setPassword(passwordEncoder.encode(user.getPassword())  );
+        user.setPassword(passwordEncoder.encode(userDTO.getPassword())  );
         user.setRoles(roles);
         userRepository.save(user);
     }
 
     public void addAuthorRole( Long id ){
-
 
         User user= userRepository.findById(id.intValue()).orElseThrow( () ->
                      new RuntimeException("User not found with ID: " + id)
