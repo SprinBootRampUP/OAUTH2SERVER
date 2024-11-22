@@ -93,7 +93,7 @@
                               </urlEncodedParameterState>
                               <urlEncodedParameterState>
                                 <option name="key" value="code" />
-                                <option name="value" value="vWOLlQ72gW4OtV3sKgx9Njs3kHXmL4UnEy6QL_qa-A2Aq5iY-Ubkg_z9SDvSwxJpFOvExczYQM0Iju8UABKkBH-JOkxTiirsU0ahpuhU0hTvxgXV4aEPI2eM7L0bVeCE" />
+                                <option name="value" value="M7S4rv-Gc2C1WGsgOIaaub9kJtbhl-ayXkJllcE8txRyp4PMYzE08iLLABX3Zj_XwsauroX7Qw57hcr0Sum5SKhcaSPATE5cgVUGYgPTyw789Jp7Q97Mjjb8_DcDmXHL" />
                               </urlEncodedParameterState>
                             </list>
                           </option>
@@ -135,27 +135,8 @@
                           </queryParamState>
                           <queryParamState>
                             <option name="disabled" value="true" />
-                            <option name="key" value="scope" />
-                            <option name="value" value="openid" />
-                          </queryParamState>
-                          <queryParamState>
-                            <option name="disabled" value="true" />
-                            <option name="key" value="code_challenge_method" />
-                            <option name="value" value="S256" />
-                          </queryParamState>
-                          <queryParamState>
-                            <option name="disabled" value="true" />
                             <option name="key" value="code" />
-                            <option name="value" value="xSDKl2hr4_oI5kVflcl1Y_oRi2OwgJTl7rA31lBv2OU3rheqHjBVOCK3uLASZs3J_r0FhQbpyweknQoD8pWTr9R1zMhdJIvFqr7vtTXMZxG5MuLGd_At0ol6AibP8UYX" />
-                          </queryParamState>
-                          <queryParamState>
-                            <option name="disabled" value="true" />
-                            <option name="key" value="code_verifier" />
-                            <option name="value" value="-5s8QwgtWju00R6s7068rI-ao_3dxy-64J57oJpBVRdYd3sYJHveRonARs5hKy6Q7t3JDe4t9H5NpmhkYLV0gEwnBojg8CsNwW8V0AxenI---yHqz8a5iIUCpa8tDbYH" />
-                          </queryParamState>
-                          <queryParamState>
-                            <option name="disabled" value="true" />
-                            <option name="value" value="" />
+                            <option name="value" value="T5UrWTWwQZ48H4cnftpDH6ssWnW4x0D7Z0bgECSGnp_9MSZ3BJ6pGZLcQBpm2GdBnCd9V8n7Zkx8mkAsZsPjEHk5MFHvMRSQzA0ROpXA-sqmgL3LRkXCEd7NSQV_M3th" />
                           </queryParamState>
                         </list>
                       </option>
