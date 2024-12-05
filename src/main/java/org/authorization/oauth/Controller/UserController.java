@@ -25,6 +25,12 @@ public class UserController {
 @Autowired
 private UserService userService;
 
+    @GetMapping("/ping")
+    public String ping(){
+        return "HEllO form API server";
+    }
+
+
     @PostMapping("/register")
     public ResponseEntity<Map<String,String>> register(@RequestBody UserDTO userDTO){
         userService.register(userDTO);

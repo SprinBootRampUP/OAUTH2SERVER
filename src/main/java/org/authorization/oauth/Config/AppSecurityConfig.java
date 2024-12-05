@@ -41,6 +41,7 @@ public class AppSecurityConfig {
                 .authorizeHttpRequests( request -> request
                         .requestMatchers("/oauth/api/register" ,"/oauth/test").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs*/**" ,"/api-docs/**").permitAll()
+                        .requestMatchers("/oauth/api/ping").permitAll()
 
                         .anyRequest().authenticated()
                 )

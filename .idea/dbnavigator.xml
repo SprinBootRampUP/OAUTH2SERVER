@@ -9,6 +9,24 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DataExportManager">
+    <export-instructions>
+      <create-header value="true" />
+      <friendly-headers value="false" />
+      <quote-values-containing-separator value="true" />
+      <quote-all-values value="false" />
+      <value-separator value="" />
+      <begin-quote value="&quot;" />
+      <end-quote value="&quot;" />
+      <file-name value="course.xls.sql" />
+      <file-location value="" />
+      <scope value="SELECTION" />
+      <destination value="CLIPBOARD" />
+      <format value="SQL" />
+      <charset value="UTF-8" />
+      <charset value="UTF-8" />
+    </export-instructions>
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
@@ -24,9 +42,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="d0220004-7677-4b60-8728-20d333302041" object-ref="schemas/test/tables/course" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="d0220004-7677-4b60-8728-20d333302041" />
@@ -36,6 +52,8 @@
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="dummy.user_roles" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="test.course" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="dummy.user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="course.course" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="api.course" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
