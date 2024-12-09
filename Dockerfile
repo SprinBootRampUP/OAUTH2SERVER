@@ -1,5 +1,7 @@
+
+
 FROM openjdk:17-jdk-slim
-VOLUME /tmp
-ARG JAR_FILE=target/OAUTH2.0SERVER-1.0-SNAPSHOT.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+WORKDIR /sharan
+COPY target/OAUTH2.0SERVER-1.0-SNAPSHOT.jar jarfolder/api.jar
+EXPOSE 3006
+ENTRYPOINT ["java", "-jar", "jarfolder/api.jar"]

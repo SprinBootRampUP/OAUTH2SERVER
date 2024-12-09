@@ -42,7 +42,9 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="d0220004-7677-4b60-8728-20d333302041" object-ref="schemas/dummy/tables/role" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="d0220004-7677-4b60-8728-20d333302041" />
@@ -52,7 +54,9 @@
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="dummy.user_roles" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="test.course" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="dummy.user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="dummy.role" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="course.course" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="course.users" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d0220004-7677-4b60-8728-20d333302041" dataset="api.course" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
